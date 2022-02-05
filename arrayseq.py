@@ -1,13 +1,16 @@
 
 
 
+
+
+
 class Array_Seq:
 	def __init__(self):
 		self.A = []
 		self.size = 0
 
 	def __len__(self): return self.size
-	def __iter__(self): yeild from self.A
+	def __iter__(self): yield from self.A
 	def build(self, A):
 		self.A = [a for a in A]
 		self.size = len(A)
@@ -18,7 +21,7 @@ class Array_Seq:
 		for k in range(n):
 			A[j + k] = self.A[i + k]
 	
-	def _copy_backward(self. i, n, A, j):
+	def _copy_backward(self, i, n, A, j) :
 		for k in range(n - 1, -1, -1):
 			A[j + k] = self.A[i + k]
 
@@ -30,6 +33,7 @@ class Array_Seq:
         A[i] = x
         self._copy_backward(i , n - i, A, i + 1)
 		self.build(A)
+
     def delete_at(self, i):
 		n = len(self)
 		A = [None] * (n - 1)

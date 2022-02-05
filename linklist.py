@@ -6,7 +6,7 @@ class Linked_List_Node:
 	def later_node(self, i):
 		if i == 0: return self 
 		assert self.next
-		return self.next.later_node(i - 1)
+		return self.next.later_node(i   - 1)
 
 class Linked_List_Seq:
     def __init__(self) -> None:
@@ -17,7 +17,7 @@ class Linked_List_Seq:
     def __iter__ (self):
         node = self.node
         while node:
-            yeild self.item
+            yield self.item
             node = node.next
     
     def build(self, A):
